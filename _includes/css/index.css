@@ -19,18 +19,29 @@
   font-size: 2em;
   text-align: center;
   width: 550px;
+
+  line-height: 200%;
 }
 
 .name {
-  color: grey;
-  background: azure;
+  color: black;
+  background: lavender;
   border-radius: 5px;
+  padding: 4px;
 }
 
 .dev {
-  color: grey;
-  background: azure;
+  color: black;
+  background: lightgoldenrodyellow;
   border-radius: 5px;
+  padding: 4px;
+}
+
+.location {
+  color: black;
+  background: lightpink;
+  border-radius: 5px;
+  padding: 4px;
 }
 
 .footer {

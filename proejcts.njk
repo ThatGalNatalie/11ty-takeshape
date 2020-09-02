@@ -12,11 +12,33 @@ permalink: '/projects/{{project.name|slug}}/'
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11ty with TakeShape - 🏡</title>
+    <title>11ty with TakeShape</title>
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "css/projects.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
   </head>
 
   <body>
-    {{project.name}}
+    <a href="/project">
+      <button class="btn">Back</button>
+    </a>
+
+    <section class="container">
+      <h1>{{project.name}}</h1>
+
+      {% for item in project.description.blocks %}
+        <p>{{ item.text }}</p>
+      {% else %}
+        <p>Description coming soon...</p>
+      {% endfor %}
+
+    </section>
   </body>
 
 </html>

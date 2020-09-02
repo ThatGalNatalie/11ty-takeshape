@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;400&display=swap');
+
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 4em;
+}
+
+p {
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 100;
+  font-size: 2em;
+  width: 700px;
+}
+
+.btn {
+  padding: 5px;
+  border: 3px solid;
+  border-color: #5510f1;
+  background-color: #5510f1;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #eef1ea;
+  color: black;
+}

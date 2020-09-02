@@ -1,0 +1,27 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+  padding: 20px;
+}
+
+.card {
+  background: #eef1ea;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card-btn {
+  padding: 5px;
+  border: 3px solid;
+  border-color: #5510f1;
+  background-color: #5510f1;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background: #eef1ea;
+  color: black;
+}
