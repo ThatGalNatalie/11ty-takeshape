@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+.profile {
+  padding: 40px;
+  background: #ffc5c4;
+  border-radius: 50%;
+}
+
+.profile > img {
+  width: 200px;
+}
+
+.container > h1 {
+  margin: 50px;
+  font-size: 2em;
+  text-align: center;
+  width: 550px;
+}
+
+.name {
+  color: grey;
+  background: azure;
+  border-radius: 5px;
+}
+
+.dev {
+  color: grey;
+  background: azure;
+  border-radius: 5px;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+}

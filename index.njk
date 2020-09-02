@@ -1,0 +1,41 @@
+---
+layout: navbar.njk
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11ty with TakeShape - 🏡</title>
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "css/index.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+  </head>
+
+  <body>
+
+    <section class="container">
+      <div class="profile">
+        <img src="./img/woman.svg"/>
+      </div>
+
+      <h1>I'm
+        <span class="name">Natalie</span>. I'm a
+        <span class="dev">Front-end developer</span>
+        based in Los Angeles, CA. I'm also a writer and movie lover.</h1>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ❤️</p>
+    </footer>
+  </body>
+
+</html>

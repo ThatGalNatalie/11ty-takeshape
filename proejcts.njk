@@ -1,0 +1,22 @@
+---
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: '/projects/{{project.name|slug}}/'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11ty with TakeShape - 🏡</title>
+  </head>
+
+  <body>
+    {{project.name}}
+  </body>
+
+</html>

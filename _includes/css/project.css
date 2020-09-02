@@ -1,0 +1,12 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+  padding: 20px;
+}
+
+.card {
+  background: antiquewhite;
+  padding: 20px;
+  border-radius: 5px;
+}

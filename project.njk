@@ -1,0 +1,47 @@
+---
+data: projects 
+layout: navbar.njk
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11ty with TakeShape - 🏡</title>
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "css/project.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+  </head>
+
+  <body>
+    <h1>Total Projects:{{projects.length}}</h1>
+    <div class="card-container">
+      {% for project in projects %}
+
+        <div class="card">
+          <h1>{{ project.name }}</h1>
+          <p>Client:
+            {{project.client.name}}</p>
+
+          <a href="/projects/{{project.name | slug}}">
+            <button>See More</button>
+          </a>
+
+        </div>
+
+      {% else %}
+        <li>Projects coming soon...</li>
+      {% endfor %}
+    </div>
+
+  </body>
+
+</html>

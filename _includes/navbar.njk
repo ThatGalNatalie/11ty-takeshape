@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11ty with TakeShape</title>
+
+    <!-- capture the CSS content as a Nunjucks variable -->
+    {% set css %}
+    {% include "css/navbar.css" %}
+    {% endset %}
+    <!-- feed it through our cssmin filter to minify -->
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <nav class="navbar">
+
+        <div>
+          <a href="/">
+            <img class="nav-icon" src="../img/home-run.svg" alt="home icon"/>
+            <p class="links">Home</p>
+          </a>
+        </div>
+
+        <div>
+          <a href="/project">
+            <img class="nav-icon" src="../img/project.svg" alt="project icon"/>
+            <p class="links">Projects</p>
+          </a>
+        </div>
+
+        <div>
+          <a href="/blog">
+            <img class="nav-icon" src="../img/blog.svg" alt="blog icon"/>
+            <p class="links">Blogs</p>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <section>
+      {{content | safe}}
+    </section>
+  </body>
+
+</html>

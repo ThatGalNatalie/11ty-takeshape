@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: aliceblue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.nav-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.links {
+  text-align: center;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 300px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
